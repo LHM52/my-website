@@ -1,0 +1,179 @@
+/* 공통 사용 클래스 */
+.mt100 {
+  margin-top: 100px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+[id^="popup-"] {
+  display: none;
+}
+
+/* 메인 비주얼 이미지 슬라이드 영역 */
+#carouselExampleControls {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  28% {
+    margin-left: 0;
+  }
+  42% {
+    margin-left: -100%;
+  }
+  71% {
+    margin-left: -100%;
+  }
+  85% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
+}
+
+.carousel-inner {
+  width: 300%;
+  animation: slide 7s linear alternate infinite;
+}
+.carousel-item {
+  display: block;
+  width: calc(100% / 3);
+  margin-right: 0;
+}
+
+/* 온라인 집들이 영역 */
+.card {
+  overflow: hidden;
+}
+.card-img-top.before {
+  margin-left: 0;
+  transition: margin-left .3s;
+}
+.card-img-top.after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: left .3s;
+}
+
+.card:hover .card-img-top.after {
+  left: 0;
+}
+.card:hover .card-img-top.before {
+  margin-left: -100%;
+}
+
+/* 전문가 영역 */
+.flip-card {
+  width: 100%;
+  perspective: 1000px;
+}
+.flip-card:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+#footer {
+  height: 100px;
+  line-height: 100px;
+  color: #fff;
+  /* text-align: center; */
+}
+
+/* 모바일 버전 헤더 영역 */
+.navbar-toggler:hover + .navbar-collapse {
+  display: block !important;
+}
+
+/* 장바구니 영역 */
+#basket {
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+#drop-area {
+  width: 100%;
+  height: 200px;
+  line-height: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.btn-delete {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.store-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#popup-buy .row {
+  line-height: 35px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+#msg-empty {
+  display: none;
+}
+
+/* 회원가입 */
+.submit-button {
+  display: none;
+}
+
+.color-white {
+  color: #fff;
+}
+
+/* 전문가 리스트 */
+.image-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
